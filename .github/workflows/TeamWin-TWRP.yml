@@ -115,6 +115,7 @@ jobs:
     - name: Repo Sync
       run: |
         cd android-recovery
+        repo init -u git://github.com/omnirom/android.git -b android-8.1
         repo sync -j$(nproc --all) --force-sync
       
     - name: Clone Device Tree
