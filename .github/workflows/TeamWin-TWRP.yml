@@ -78,7 +78,7 @@ jobs:
     - name: Check Manifest Branch
       run: |
         if [ ${{ inputs.MANIFEST_BRANCH }} == 'twrp-11' ] || [ ${{ inputs.MANIFEST_BRANCH }} == 'twrp-12.1' ]; then
-            echo "MANIFEST=https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git" >> $GITHUB_ENV
+            echo "MANIFEST=https://github.com/sounddrill31/platform_manifest_twrp_omni" >> $GITHUB_ENV
             echo "CHECK_LEGACY_BRANCH=false" >> $GITHUB_ENV
         else
             echo "MANIFEST=https://github.com/sounddrill31/platform_manifest_twrp_omni" >> $GITHUB_ENV
@@ -110,7 +110,6 @@ jobs:
         cd android-recovery
         git config --global user.name "lazycodebuilder"
         git config --global user.email "154446636+lazycodebuilder@users.noreply.github.com"
-        repo init --depth=1 -u ${{ env.MANIFEST }} -b ${{ inputs.MANIFEST_BRANCH }}
 
     - name: Repo Sync
       run: |
