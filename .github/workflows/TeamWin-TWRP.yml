@@ -81,7 +81,7 @@ jobs:
             echo "MANIFEST=https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git" >> $GITHUB_ENV
             echo "CHECK_LEGACY_BRANCH=false" >> $GITHUB_ENV
         else
-            echo "MANIFEST=https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git" >> $GITHUB_ENV
+            echo "MANIFEST=https://github.com/sounddrill31/platform_manifest_twrp_omni" >> $GITHUB_ENV
             echo "CHECK_LEGACY_BRANCH=true" >> $GITHUB_ENV
         fi
 
